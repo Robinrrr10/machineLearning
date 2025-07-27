@@ -1,0 +1,5 @@
+Tutorial 2: Machine Learning Tutorial Python - 2: Linear Regression Single Variable
+------------------------------------------------------------------------------------
+This is the tutorial where we can learn how to predict the values when we have list of two pair values.
+Here we have used the example of area in square feets and its price in a city
+When we have few in the list, we can able to predict the value for any square fleet.
