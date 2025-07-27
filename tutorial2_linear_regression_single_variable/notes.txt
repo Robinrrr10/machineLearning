@@ -30,7 +30,15 @@ b = intercept (value when area = 0)
 
 -------------
 
-As per formula and as per calculated coef and intercept for the first price 550000 and square feet 2600
-550000 = (135.78767123 * 2600) + 180616.43835616432
+It given coef as 135.78767123
+It given intercept as 180616.43835616432
+So for 5000 square fleet of area it given price as 859554.79452055
+Below is the formula
+price = (135.78767123 * 5000) + 180616.43835616432
+price = 180616.43835616432
+
+
+-------------
+
 
 ------
