@@ -1,0 +1,21 @@
+Tutorial 1 : Machine Learning Tutorial Python : What is Machine Learning?
+--------------------------
+
+We need to think from how the baby learn.
+We are showing a cow to the baby and we say this is cow.
+Then we are showing few more cows to the baby and we saw this is a cow
+We will continue this.
+Next time when baby see any cow, then can say it is cow.
+Say to other things or products.
+
+So here we are training the baby with different inputs of the same products multiple times for learning.
+Then it learn and able to recognise.
+Same will be doing in machine learning.
+This process is deep learning. Deep learning is also a part of machine learning
+
+We will using some mathametical concepts for achiving many things in machine learning.
+
+Below are few examples of machines learning which are already there
+1. Google gmail spam folder. Google automatically identify the spam folder and keep it in spam folder instead of inbox. Because it knows about spam folder which was alredy there is their system for long
+2. Youtube recommendation videos
+3. Even driverless cars or self driving cars
