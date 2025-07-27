@@ -3,3 +3,34 @@ Tutorial 2: Machine Learning Tutorial Python - 2: Linear Regression Single Varia
 This is the tutorial where we can learn how to predict the values when we have list of two pair values.
 Here we have used the example of area in square feets and its price in a city
 When we have few in the list, we can able to predict the value for any square fleet.
+
+
+
+Maths
+-----
+
+Here internally it uses the formula
+y = mx + b
+
+m is slope or gradient (coef)
+b is intercept
+
+Here
+price = m * area + b
+
+Below is the formula to find the 
+
+---
+
+
+price = w * area + b          //w or m both are same
+where
+w = coefficient (slope)
+b = intercept (value when area = 0)
+
+-------------
+
+As per formula and as per calculated coef and intercept for the first price 550000 and square feet 2600
+550000 = (135.78767123 * 2600) + 180616.43835616432
+
+------
