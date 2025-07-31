@@ -41,8 +41,42 @@ This is the tutorial where we can learn how to predict the values when we have l
 Here we have used the example of area in square feets and its price in a city
 When we have few in the list, we can able to predict the value for any square fleet.
 
+When one value is depend on one variable, below is the formula
+y = mx + b
+Here we give many sample input with list of two values. Based on this formula, it will predict for the given one
 
 
+x is the coefficient(independent variable or feature)
+b is the intercept
+y is the is the dependent variable (which is target value)
+
+
+-------------------------
+
+
+Machine Learning Tutorial Python - 3: Linear Regression Multiple Variables
+---------------------------
+Here for finding one value, it might be depend on multiple values.
+Eg: calculating home price is depend on squarefeet, number of bedrooms, age of home etc
+So when one taget value depend on multiple variable, we can go with below formula
+
+y = m1x1 + m2x2 + m3x3 + b
+
+Below is the formula for above example
+
+price = m1 * area + m2 * bedrooms + m3 * age + b
+
+
+
+----------------------------------
+
+
+
+
+
+
+
+-------------------------------
 
 
 
