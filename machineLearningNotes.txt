@@ -50,6 +50,7 @@ x is the coefficient(independent variable or feature)
 b is the intercept
 y is the is the dependent variable (which is target value)
 
+Check the examples for more details
 
 -------------------------
 
@@ -85,9 +86,9 @@ reg = linear_model.LinearRegression()
 ref.fit(df[[area, bedroom, age]], price)    //Here we are adding the input to train,
 
 ref.coef_        #To give coefficient
-ref.regression   # To give fomula
+ref.intercept_   # To give intercept value
 
-ref.predict(4000, 3, 5)   - This will print the prd=
+ref.predict(4000, 3, 5)   - This will print the predicted value as per input given. We should give same number of parameters and its values
 
 ----------------------------------
 
