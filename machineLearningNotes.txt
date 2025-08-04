@@ -66,6 +66,11 @@ Below is the formula for above example
 
 price = m1 * area + m2 * bedrooms + m3 * age + b
 
+Here area, bedrooms and age are independent variables
+b is intercept
+price is dependent variables
+
+Independent variables are also called as features
 
 
 ----------------------------------
@@ -79,6 +84,9 @@ price = m1 * area + m2 * bedrooms + m3 * age + b
 -------------------------------
 
 
+
+Notes:
+-----
 
 
 
