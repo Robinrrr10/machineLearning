@@ -67,10 +67,17 @@ Below is the formula for above example
 price = m1 * area + m2 * bedrooms + m3 * age + b
 
 Here area, bedrooms and age are independent variables
+m1, m2 and m3 are coefficient
 b is intercept
 price is dependent variables
 
 Independent variables are also called as features
+
+We can have n number of independent variables and coefficient combinations
+
+
+
+math.floor(giveValue)    # this will give the roundedv value
 
 
 ----------------------------------
