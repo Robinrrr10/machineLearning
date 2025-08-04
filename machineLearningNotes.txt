@@ -80,7 +80,18 @@ We can have n number of independent variables and coefficient combinations
 math.floor(giveValue)    # this will give the roundedv value
 
 
+
+reg = linear_model.LinearRegression()
+ref.fit(df[[area, bedroom, age]], price)    //Here we are adding the input to train,
+
+ref.coef_        #To give coefficient
+ref.regression   # To give fomula
+
+ref.predict(4000, 3, 5)   - This will print the prd=
+
 ----------------------------------
+
+
 
 
 
