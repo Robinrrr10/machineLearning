@@ -55,7 +55,7 @@ Check the examples for more details
 -------------------------
 
 
-Machine Learning Tutorial Python - 3: Linear Regression Multiple Variables
+Tutorial 3: Machine Learning Tutorial Python - 3: Linear Regression Multiple Variables
 ---------------------------
 Here for finding one value, it might be depend on multiple values.
 Eg: calculating home price is depend on squarefeet, number of bedrooms, age of home etc
@@ -92,6 +92,8 @@ ref.predict([[4000, 3, 5]])   - This will print the predicted value as per input
 
 ----------------------------------
 
+Tutorial 4: Machine Learning Tutorial Python - 4: Gradient Descent and Cost Function
+----------------------------------------------------------------------------
 
 
 
