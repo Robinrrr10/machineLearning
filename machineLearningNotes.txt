@@ -94,6 +94,36 @@ ref.predict([[4000, 3, 5]])   - This will print the predicted value as per input
 
 Tutorial 4: Machine Learning Tutorial Python - 4: Gradient Descent and Cost Function
 ----------------------------------------------------------------------------
+We won't we directly using the gradient descent in machine learning.
+But if we know this we can understand and we can use the sklearn library in effectively
+
+If school, we will have the equation, based on the equation we can find the values
+
+In ML, we will have the input and out. Based on input and output, we find the equation
+Eg: In tutorial 2, we have input and output. (squarefleet and price)
+Based on values of input and output list, we can able to find the output if some newput was given
+
+IF we plot the square fleet and price, then we can able to draw the line which can be best fit
+
+This line will be the equation
+
+Goal of this tutorial is find the equation
+
+To find this, lets draw a best fit line.
+Lets take a gap of each data point and the line
+Cdeollect these data and square them
+And then devide them by number of data point
+These result is called mean square error
+
+
+
+
+
+
+
+
+
+
 
 
 
