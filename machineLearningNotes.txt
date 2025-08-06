@@ -113,7 +113,16 @@ To find this, lets draw a best fit line.
 Lets take a gap of each data point and the line
 Cdeollect these data and square them
 And then devide them by number of data point
-These result is called mean square error
+These result is called mean square error.
+Mean squalre is also called cost function
+Mean spare file
+
+actual data point - predicted data point.Square this.
+
+Gradle descent is technique to find the equltion/formula in efficent way
+
+
+
 
 
 
