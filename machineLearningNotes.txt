@@ -203,7 +203,8 @@ m = m - learning rate * @/@m
 b = b - learning rate * @/@b
 
 
-
+We will be having b1 value which is the starting point of he slope, then we have next point as b2
+b2 = b1 - learning rate * @/@b
 
 
 
