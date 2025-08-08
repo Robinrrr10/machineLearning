@@ -1,4 +1,4 @@
-
+TI
 
 Machine Learning Notes:
 ----------------------
@@ -207,7 +207,7 @@ We will be having b1 value which is the starting point of he slope, then we have
 b2 = b1 - learning rate * @/@b
 
 
-
+TILL 16 mins done. Have to add others and have to take screenshots of existing mins also
 -------------------------------
 
 
