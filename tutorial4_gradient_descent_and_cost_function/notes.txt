@@ -113,4 +113,12 @@ We will be having b1 value which is the starting point of he slope, then we have
 b2 = b1 - learning rate * @/@b
 
 
-TILL 16 mins done. Have to add others and have to take screenshots of existing mins also
+We need to reduce the cost as much we can. 
+When we get the same cost, that is the answer
+
+Initially we can give less iteration and with higher learning rate difference. Then reduce the learning rate with more decimals
+Our goal is to reduce the cost as much. It should not increase.
+We should start learning rate with first 0.1. 0.09, 0.08 etc. We need to find the minimum and stick to that learning rate
+Once we stick to the learning rate, then increase the iteration count from 10 to 100, or 1000 or 10000
+Once we reached the cost will remain nearly same
+
