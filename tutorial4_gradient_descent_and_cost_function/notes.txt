@@ -1,0 +1,116 @@
+Tutorial 4: Machine Learning Tutorial Python - 4: Gradient Descent and Cost Function
+----------------------------------------------------------------------------
+We won't we directly using the gradient descent in machine learning.
+But if we know this we can understand and we can use the sklearn library in effectively
+
+If school, we will have the equation, based on the equation we can find the values
+
+In ML, we will have the input and out. Based on input and output, we find the equation
+Eg: In tutorial 2, we have input and output. (squarefleet and price)
+Based on values of input and output list, we can able to find the output if some newput was given
+
+IF we plot the square fleet and price, then we can able to draw the line which can be best fit
+
+This line will be the equation
+
+Goal of this tutorial is find the equation
+
+To find this, lets draw a best fit line.
+Lets take a gap of each data point and the line
+Collect these data and square them
+And then devide them by number of data point
+These result is called mean square error.
+Mean squalre is also called cost function
+Mean spare file
+
+actual data point - predicted data point.Square this.
+
+Gradle descent is technique to find the equltion/formula in efficent way and with less iteration.
+
+
+To find we will take a 3D graph which has m in one side and b in other side. and we can find mse(mean square error) which will be in height section
+
+We wil start with the 0 as the m and b value to find the mse, then we will give other values of m and b, and we notice mse will fall little down slop.
+We can repeat the same multiple times ( We need to take small baby step/slop) and finally we can notice the mse will have the same point with very less different which is global minimum.
+That is the answer, that we can use as the m and b in prediction.
+
+We can take multiple m as m1, m2, m3 which might fall on multiple lines. but we need to find the correct mean line
+We need to reduce the m and b to find the best fit line. 
+
+We need to also look the graph from b and mse and also form m and mse
+
+If I take fixed difference/step/slop there are chances I might miss the minimum
+How I can do that.
+I can minimise the step/slop/difference in each time smaller and smaller in each time, that can help to reach the minimum.
+We need to also find the slop and the direction also in each and compare where to go
+
+If need we can also use "Essence of calculus" from 3Blue1Brown youtube channel to learn maths things related to this - This is good in explaining in detail
+
+
+Derivatives is all about slope
+
+To find slope between two points use below formula
+slope = change in y / change in x
+
+What if we want to slope in particular point
+To calculate we can use below formula
+slope = small change in y / small change in x
+
+Here x shrink to 0 and y shrink to 0. Thats where we we will most acurate slope
+For equalation link X square (X^2), the slope will be 2X    //IMP: Here we have used ^ where we want to add square or cube above
+
+This is the derivatives
+Equation of derivatives is d/dx X2 = 2X
+
+So when X is 2, slope will be 4
+When X is 5, slope will be 10
+
+
+Lets see what is partial derivatives:
+
+Below is the formula for finding partial derivatives
+
+f(x,y)  = X^2 + Y^3      //X square + Y cube .
+
+We can keep other value as 0 and we can find x
+f(x,y) = X^2 + 0 = 2X
+
+We can keep oter value s 0 and we can find y
+f(x,y) = 0 + Y^3 = 3Y^2
+
+
+
+Derivatives of x
+f(x) = x^3
+d/dx x^3 = 3x^2
+
+
+
+f(x,y) = x^3 + y^2
+
+@f/@x = 3x^2 + 0 = 3x^2
+
+@f/@y = 0 + 2y = 2y
+
+
+In our case, we need to find the partial derivatives of b and paritial derivatives of m // Below are the equations
+
+mse = 1/2 nEi=0 (yi - (mxi + b))^2
+
+@/@m = 2/n nEi=0 -xi (yi - (mxi + b))
+
+@/@b = 2/n nEi=0 -(yi - (mxi + b))
+
+
+Once we have partial derivatives, we will be having slope which is the direction.
+Once we have direction, we have to move a step
+For step use below formula
+m = m - learning rate * @/@m
+b = b - learning rate * @/@b
+
+
+We will be having b1 value which is the starting point of he slope, then we have next point as b2
+b2 = b1 - learning rate * @/@b
+
+
+TILL 16 mins done. Have to add others and have to take screenshots of existing mins also
