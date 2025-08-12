@@ -217,9 +217,31 @@ Once we reached the cost will remain nearly same
 
 ------------------------
 
+Tutorial 5: Machine Learning Tutorial Python - 5: Save Model Using Joblib And Pickle
+--------------------------------------------------------------------------------------
+In this tutorial we can see how we can save the model and we can reuse the model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------
 
 Notes:
 -----
+
+Model: Model is the application of machine learning.
+Model is the tool which we have trained and ready for use.
 
 
 
