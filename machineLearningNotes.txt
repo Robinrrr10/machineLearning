@@ -222,7 +222,7 @@ Tutorial 5: Machine Learning Tutorial Python - 5: Save Model Using Joblib And Pi
 In this tutorial we can see how we can save the model and we can load the model
 There are two ways to save and load the model
 1. pickle
-2. sklearn joblib
+2. sklearn joblib or joblib
 
 We can save the trained model
 
@@ -255,7 +255,7 @@ with open('my_model', 'rb') as f:
 
 
 
-2.  sklearn joblib:
+2.  sklearn joblib or joblib   //joblib is the latest
 
 //Below are the steps to save the model
 
@@ -268,7 +268,8 @@ joblib.dump(reg, 'myModel')
 
 //Below are the steps to load the model
 
-from sklearn.external import joblib
+from sklearn.external import joblib  //Old
+from joblib       //newone
 
 modelObj = joblib.load(giveFileNameHere)                     # This is to load the model
 Eg:
