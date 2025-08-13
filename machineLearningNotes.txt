@@ -255,8 +255,30 @@ with open('my_model', 'rb') as f:
 
 
 
+2.  sklearn joblib:
+
+//Below are the steps to save the model
+
+from sklearn.external import joblib
+
+joblib.dump(giveModelHere, 'giveFileNameHere')                     # This is to save the model
+Eg:
+joblib.dump(reg, 'myModel')
 
 
+//Below are the steps to load the model
+
+from sklearn.external import joblib
+
+modelObj = joblib.load(giveFileNameHere)                     # This is to load the model
+Eg:
+model = joblib.load('myModel')
+
+
+Model will be saved in binary format.
+When our model has large numpy array it is suggested to use joblib.
+In other cases we can use pickle.
+But mosly both works in same way
 
 
 
