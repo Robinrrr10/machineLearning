@@ -219,7 +219,41 @@ Once we reached the cost will remain nearly same
 
 Tutorial 5: Machine Learning Tutorial Python - 5: Save Model Using Joblib And Pickle
 --------------------------------------------------------------------------------------
-In this tutorial we can see how we can save the model and we can reuse the model
+In this tutorial we can see how we can save the model and we can load the model
+There are two ways to save and load the model
+1. pickle
+2. sklearn joblib
+
+We can save the trained model
+
+
+1.pickle: 
+//Below are the steps to save the model
+
+import pickle
+with open('new_file_name', 'wb') as f:                 //wb means write byte
+    pickle.dump(givenModel, f)
+
+Eg:
+
+with open('my_model', 'wb') as f:
+    pickle.dump(reg, f)
+
+
+
+//Below are the steps to load the saved model
+
+import pickle
+with open('file_name', 'rb') as f:                 //rb means read byte
+    giveobjName = pickle.load(f)
+
+Eg:
+import pickle
+with open('my_model', 'rb') as f:  
+    ref = pickle.load(f)
+
+
+
 
 
 
