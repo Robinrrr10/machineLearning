@@ -286,7 +286,7 @@ But mosly both works in same way
 
 Tutorial 6: Machine Learning Tutorial Python - 6: Dummy Variables & One Hot Encoding
 ------------------------------------------------------------------------------------
-
+In this tutorial we will cover categorial, dummat variables and one hot encoding
 
 
 
