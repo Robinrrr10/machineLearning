@@ -287,6 +287,22 @@ But mosly both works in same way
 Tutorial 6: Machine Learning Tutorial Python - 6: Dummy Variables & One Hot Encoding
 ------------------------------------------------------------------------------------
 In this tutorial we will cover categorial, dummat variables and one hot encoding
+Lets say we have few string values in the table 
+Eg: the price of the house price is based on square feet as well as the city. Here city will be in string.
+Machines are good in numberic values
+We can use each city as each number. Eg: 1, 2, 3.
+Machine will also thing this as increasing order or 1+2 =3. This might confuse the machines.
+
+There are two types of categorial variables
+1. Nominal - These are not numberic values. Eg: male, felmale, Eg: different colors like white, green, Eg: different cities like delhi, chennai etc
+2. Ordinal - These are related to numberic values. Eg: Customer rating 1, 2, 3 Eg: high, medium, low. For these types we can still use number.
+
+
+For in this case, it is nominal. So we cannot use number value.
+To solve this we can have different column for each values and have filled with 1 and 0.
+Eg:
+We can take delhi as one column and we can have 1 value for row for which matches with delhi. For other we can give 0
+We can take chennai as one more column. We can give 1 value for row which matches with chennai. For other we can give 0
 
 
 
