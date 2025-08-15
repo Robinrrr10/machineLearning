@@ -299,7 +299,7 @@ There are two types of categorial variables
 
 
 For in this case, it is nominal. So we cannot use number value.
-To solve this we can have different column for each values and have filled with 1 and 0.
+To solve this use technique called one hot encoding where we can have different column for each values and have filled with 1 and 0.
 Eg:
 We can take delhi as one column and we can have 1 value for row for which matches with delhi. For other we can give 0
 We can take chennai as one more column. We can give 1 value for row which matches with chennai. For other we can give 0
