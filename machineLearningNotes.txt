@@ -306,6 +306,31 @@ We can take chennai as one more column. We can give 1 value for row which matche
 
 
 
+We have to create multiple columns for each rows with value True/false or 1/0.
+Then we have to drop the actual column which has multiple string value.
+Then we have to drop one of the newly created column. because that can be derived from the other columns if we make it as false or 0
+
+Then we can have indepedent variables in one table x
+And dependent variable in other table y
+
+We can pass both into the fit method the linear regression for training
+Eg:
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(x,y)
+
+If we want to get the accuracy rate, we can use score method.
+model.score(x,y)   . Here 0.95 means 95% and 1 means 100%
+
+Then for prediction we can use the same along with newly created column value
+model.predict([['columnValue1', 'columnValue2', 'columnValue3']])
+
+
+model.predict([[5000, True, False]])   # This is to find in monroe township
+model.predict([[5000, False, True]])  # This is to find in robinsville
+model.predict([[5000, False, False]]) # This is to find in west windsor   //We have not created column for west windsor. But by giving false false, we can get the value
+
+
 
 
 
