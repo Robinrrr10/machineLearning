@@ -297,7 +297,7 @@ There are two types of categorial variables
 1. Nominal - These are not numberic values. Eg: male, felmale, Eg: different colors like white, green, Eg: different cities like delhi, chennai etc
 2. Ordinal - These are related to numberic values. Eg: Customer rating 1, 2, 3 Eg: high, medium, low. For these types we can still use number.
 
-
+Method 1:
 For in this case, it is nominal. So we cannot use number value.
 To solve this use technique called one hot encoding where we can have different column for each values and have filled with 1 and 0.
 Eg:
@@ -307,11 +307,25 @@ We can take chennai as one more column. We can give 1 value for row which matche
 
 
 We have to create multiple columns for each rows with value True/false or 1/0.
+For creating multiple columns for each string rows use below
+dummies = pd.get_dummies(df.columnName)  # This will just create multiple rows for each string columns
+dummies = pd.get_dummies(df.town) # For each town, it will create coumns
+
+Then join both actual and dummies, use below
+mergedtable = pd.concat([df, dummies], axis='columns')   # We have to join the columns
+
+
 Then we have to drop the actual column which has multiple string value.
 Then we have to drop one of the newly created column. because that can be derived from the other columns if we make it as false or 0
 
+Below is to drop
+finalTable = mergedtable.drop(['town', 'west windsor'], axis='columns') # Here we are dropping town as we have already created column for each value. Also we are dropping west windsor because with previous two column(with value false) it can be derived
+
 Then we can have indepedent variables in one table x
+x = finalTable.drop(['price'], axis='columns')
+
 And dependent variable in other table y
+y = finalTable.price
 
 We can pass both into the fit method the linear regression for training
 Eg:
@@ -329,6 +343,60 @@ model.predict([['columnValue1', 'columnValue2', 'columnValue3']])
 model.predict([[5000, True, False]])   # This is to find in monroe township
 model.predict([[5000, False, True]])  # This is to find in robinsville
 model.predict([[5000, False, False]]) # This is to find in west windsor   //We have not created column for west windsor. But by giving false false, we can get the value
+
+
+Refer jupyter notebook for details
+
+Method 2:
+Below is with one hot encoder
+
+
+df2 = df    # for second method we just using df2
+df2
+
+We can use label encoder to give number for each of the string value
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+df2.town = le.fit_transform(df['town'])    # This will give number for each value pf town
+
+Then we can assign independent variables to X in array format
+X = df2[['town', 'area']].values          #pass the values in array
+
+Then assign dependent price variables to y in array format
+y = df2.price.values
+
+Now use one hot encoder to create dummy variables for each of the town    
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer           
+ct = ColumnTransformer([('town', OneHotEncoder(), [0])], remainder='passthrough') 
+
+ # IMPORTANT : WE CAN SEE FEW DIFFERENCE IN VIDEO AND THIS CODE, BECAUSE THE VIDEO ONE WAS DEPRECATED       NOW              
+
+Assign X with each created town values of arra to the area. We can find in 2D array
+X = ct.fit_transform(X) 
+
+Now drop one of the column. Because one column can be derived from other values
+X = X[:,1:]              # Dropping first column (monroe township)
+
+Now train and predict
+
+from sklearn.linear_model import LinearRegression
+model2 = LinearRegression()
+
+model2.fit(X,y)    # Training
+
+model2.predict([[0,0,5000]])  # This is to find in monroe township
+model2.predict([[1,0,5000]])  # This is to find in robinsville
+model2.predict([[0,1,5000]]) # This is to find in west windsor
+
+model2.score(X,y)  # this is to see the accuracy score
+
+
+We can use any of the two methods
+
+---------------------
+
+
 
 
 
