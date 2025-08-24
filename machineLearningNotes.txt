@@ -75,10 +75,30 @@ Independent variables are also called as features
 
 We can have n number of independent variables and coefficient combinations
 
+Below is to find the mean value 
+df.ColumnName.mean()
+or
+df['columnName'].mean()    
+
+Eg:
+df['test_score(out of 10)'].mean()
 
 
 math.floor(giveValue)    # this will give the roundedv value
 
+Eg:
+import math
+mean_value = math.floor(df['test_score(out of 10)'].mean())
+
+Below is to replace the null value with specific vaue (Mostly with 0 or mean value)
+df.columnName = df.columnName.fillna(mean_value)
+or
+df['columnName'] = df['columnName'].fillna(mean_value)
+
+Eg"
+df['score'] = df['score'].fillname(0)    # to fill the empty value with 0
+or
+df['score'] = df['score'].fillname(mean_value)    # to fill the empty value with mean value
 
 
 reg = linear_model.LinearRegression()
