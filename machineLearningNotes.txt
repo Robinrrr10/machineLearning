@@ -235,6 +235,16 @@ Once we stick to the learning rate, then increase the iteration count from 10 to
 Once we reached the cost will remain nearly same
 
 
+
+We can also use math.isClose function to compare whether both values(current and previous cost value) are nearly same or not.
+We can give it in if condition and we can break the iterations when close values
+Eg:        
+if math.isclose(current_cost, previous_cost, rel_tol=1e-20):
+   break
+For more details about the math.isClose refer below
+https://www.w3schools.com/python/ref_math_isclose.asp
+
+
 ------------------------
 
 Tutorial 5: Machine Learning Tutorial Python - 5: Save Model Using Joblib And Pickle
