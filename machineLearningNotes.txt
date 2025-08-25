@@ -428,6 +428,26 @@ We can use any of the two methods
 
 Machine Learning Tutorial Python - 7: Training and Testing Data
 ----------------------------------------------------------------
+When we have data for training, it is better to use 80% of the data for training
+And remaining 20% of the data we can use for testing for testing
+
+We can use train test split to split the data
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)     //Here it will split 20% for training data and other 60% is for taining, This will return four params like above
+
+Now can use LinearRegression for training
+
+from sklearn.linear_model import LinearRegression
+reg = LinearRegression()
+reg.fit(X_train, y_train)
+reg.predict(X_test)    //This will show the value. Wont be exactly same. But will be near to the expected value
+Now we can compare the predicted value with y_test to see how near it was
+We can use score method to check the accuracy score
+Using score method we can find the accuracy
+
+----------------------
+
 
 
 
