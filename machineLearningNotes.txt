@@ -426,7 +426,8 @@ We can use any of the two methods
 
 ---------------------
 
-
+Machine Learning Tutorial Python - 7: Training and Testing Data
+----------------------------------------------------------------
 
 
 
