@@ -450,7 +450,19 @@ Using score method we can find the accuracy
 
 Machine Learning Tutorial Python - 8: Logistic Regression (Binary Classification)
 ---------------------------------------------------------------------------------
+All above are linear regression where we will find the number/answers based on training. 
+But in binary classification (logistic regression) we have few set of answers like yes or no, true or false, (5 or 10 or 15). The prediction is to choose one of the answers.
+Logistic regression is the technique used to solve classification problems
 
+There are 2 types of classification
+1. Binary classification Eg. This will have only two choice of answer Yes or No
+2. Multiclass classification Eg: This will have multiple choice more than two. Eg: Who ther peson will vote. Eg:  dmk, admk, tvk. 
+
+
+Lets see an example of insurance data based on age.
+Lets say we have age as the input and based on age they are buying the insurance.
+We can notice when age was higher, they are more probability of buying the insurace.
+Lesser the age has less chance to buy the insurace.
 
 
 
@@ -464,6 +476,16 @@ Notes:
 Model: Model is the application of machine learning.
 Model is the tool which we have trained and ready for use.
 
+
+Linear regression:
+This has few set of input and outputs.
+Based on that we need to predict the values for new input
+
+
+Classification (Logical regression):
+Here it has few input and few known outputs.
+Here we will be having a choice. It will have the choice like yes or not. Few definied choice.
+Based on the input params the answer will be selected amoung the choice
 
 
 
