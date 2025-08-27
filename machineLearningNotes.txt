@@ -448,7 +448,8 @@ Using score method we can find the accuracy
 
 ----------------------
 
-
+Machine Learning Tutorial Python - 8: Logistic Regression (Binary Classification)
+---------------------------------------------------------------------------------
 
 
 
