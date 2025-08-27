@@ -1,0 +1,23 @@
+Machine Learning Tutorial Python - 8: Logistic Regression (Binary Classification)
+---------------------------------------------------------------------------------
+All above are linear regression where we will find the number/answers based on training. 
+But in binary classification (logistic regression) we have few set of answers like yes or no, true or false, (5 or 10 or 15). The prediction is to choose one of the answers.
+Logistic regression is the technique used to solve classification problems
+
+There are 2 types of classification
+1. Binary classification Eg. This will have only two choice of answer Yes or No
+2. Multiclass classification Eg: This will have multiple choice more than two. Eg: Who ther peson will vote. Eg:  dmk, admk, tvk. 
+
+
+Lets see an example of insurance data based on age.
+Lets say we have age as the input and based on age they are buying the insurance.
+We can notice when age was higher, they are more probability of buying the insurace.
+Lesser the age has less chance to buy the insurace.
+
+
+For such example we need to plot that in matplotlib scatter chart.
+First we can see how the how the linear regression line looks like, we can draw it and we can separate at the middle.
+But here there is problem is when some of points are far and if we draw the line and separate.
+Few points may not be covered and there are chances we might miss.
+So the better way is to draw the curvy line as like screenshot attached in the tutorial for best fit.
+
