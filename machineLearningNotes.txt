@@ -465,6 +465,15 @@ We can notice when age was higher, they are more probability of buying the insur
 Lesser the age has less chance to buy the insurace.
 
 
+For such example we need to plot that in matplotlib scatter chart.
+First we can see how the how the linear regression line looks like, we can draw it and we can separate at the middle.
+But here there is problem is when some of points are far and if we draw the line and separate.
+Few points may not be covered and there are chances we might miss.
+So the better way is to draw the curvy line as like screenshot attached in the tutorial for best fit.
+
+
+
+
 
 
 
