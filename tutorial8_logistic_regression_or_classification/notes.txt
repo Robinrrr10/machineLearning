@@ -33,3 +33,23 @@ Sigmoid(z) = 1/1+e^-(mx+b)
 
 These mathamatics is for our understanding.
 So that we can understand how internally it works
+
+
+We need to use below for logistic regression
+
+from sklearn.linear_model import LogisticsRegression
+model = LogisticsRegression()
+
+Only above will be different, all other remains same
+model.fit(X, y)
+model.predict([[giveValueHere]])    
+model.score(X, y)
+
+predict_proba function will show prability values for each of the choice
+Whether it was near to 0 or 1.
+To which it was near to
+model.predict_proba([[giveValueHere]])
+Eg:
+model.predict_proba([[50]])
+
+model.predict_proba(X_test)
