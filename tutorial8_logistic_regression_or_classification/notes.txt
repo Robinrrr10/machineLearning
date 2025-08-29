@@ -21,3 +21,15 @@ But here there is problem is when some of points are far and if we draw the line
 Few points may not be covered and there are chances we might miss.
 So the better way is to draw the curvy line as like screenshot attached in the tutorial for best fit.
 
+In math, we can use sigmoid or logit function is used to find the middle line
+
+Below is the equation of sigmoid function
+Sigmoid(z) = 1/1+e^-z
+Here the output will be always less than 1
+It will be between 0 to 1
+
+We need to use sigmoid function on top of linear regression function. Like below
+Sigmoid(z) = 1/1+e^-(mx+b)
+
+These mathamatics is for our understanding.
+So that we can understand how internally it works
