@@ -486,6 +486,17 @@ So that we can understand how internally it works
 
 
 
+We need to use below for logistic regression
+
+from sklearn.linear_model import LogisticsRegression
+model = LogisticsRegression()
+
+Only above will be different, all other remains same
+model.fit(X, y)
+model.predict([[giveValueHere]])    
+model.score(X, y)
+
+
 
 
 
