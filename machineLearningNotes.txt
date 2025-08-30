@@ -506,6 +506,29 @@ model.predict_proba([[50]])
 
 model.predict_proba(X_test)
 
+
+-------------------
+
+Tutorail 8 (Part 2) Machine Learning Tutorial Python - 8 Logistic Regression (Multiclass Classification)
+---------------------------------------------------------------------
+Multiclass classification is the way to predict and choose out of multiple choices
+It may not have yes or not.
+It will have many choices like who to vote out of 4 parties etc
+
+In this tutorial, we can see pratical example to predict the hand written image(image data) to which number it is. It is 0 or 1  or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9
+Out of 10 numbers it should predict which number it is.
+
+Here we will be using inbuild dataset which has many image data samples
+
+
+
+
+
+
+
+
+-------------------
+
 ----------------------------
 
 Notes:
