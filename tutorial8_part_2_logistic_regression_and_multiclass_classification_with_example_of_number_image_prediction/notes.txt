@@ -1,0 +1,78 @@
+Tutorail 8 (Part 2) Machine Learning Tutorial Python - 8 Logistic Regression (Multiclass Classification)
+---------------------------------------------------------------------
+Multiclass classification is the way to predict and choose out of multiple choices
+It may not have yes or not.
+It will have many choices like who to vote out of 4 parties etc
+
+In this tutorial, we can see pratical example to predict the hand written image(image data) to which number it is. It is 0 or 1  or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9
+Out of 10 numbers it should predict which number it is.
+
+Here we will be using inbuild dataset which has many image data samples
+
+from sklearn.datasets import load_digits          //Here we have data set of handwritten digits
+
+Below has the documentation of load_digits
+https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html
+
+This has multiple image samples and its values
+from sklearn.datasets import load_digits   # This has handwritten digits
+digits = load_digits()
+
+digits.images  //This will have all images and its data in 2 D array and plotted the higher number where it matches
+//Even if we print one of the image digits.images[0] and if we shade the lines a per the higher value, we will get near to that number image
+To view this, we can use
+plt.gray()
+plt.matshow(digits.images(0))  //This will plot the values as per array values
+
+
+But we will use sigle dimension array where all images data are availabel in data
+digits.data
+All 8 X 8 array will be added in the single dimension array. So in single dimension array there would be 64 values for each
+
+For first image
+digits.data[0]
+
+All values will be available in target
+digits.target
+
+To view the value, we can use
+digits.target[0]  
+//This will print first image value
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.2)
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression(max_iter=1000) 
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+We can verify using below
+model.predict(digits.data[0:5])
+digits.target[0:5]
+Check both above outputs are same or not
+
+
+To view the accurray in the prediction, we can use confusion_matrix, we need to pass the actual and predicted values
+
+y_predicted = model.predict(X_test)
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_predicted)   #Give actual and predicted values
+We can view the cm object and we can find the accurray challenges how many times truth and the predicted value
+
+To view in good gui, we  can use below seaborn heatmap and can pass the cm confusion_matrix object
+import seaborn as sn
+plt.figure(figsize= (10,7))
+sn.heatmap(cm, annot=True)
+plt.xlabel('Predicted')
+plt.ylabel('Truth')
+
+This will show how much is the truth and predicted.
+By this we can identify when it was predicted correct and performing accurately and when was bad and not accurate
+
+we sum the correct truth and predicted values
+We can sum the missed/incorrect values. And we can find the score here also
+
+We can predict the score using below
+Score = Number of correct truth and predicted /Total values
+or
+Score = (Total values - Number of incorrect values ) / Total values
