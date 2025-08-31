@@ -614,7 +614,18 @@ df['company_n'] = df.fit_transform(df['company'])
 Like wise we need assign numeric values for each values in different columns
 Then drop the string columns as we will be using the numeric columns
 
+We can make ready the input and target file
 
+For decision tree, we can use below
+from sklearn import tree
+model = tree.DecisionTreeClassifier()
+model.fit(X, y)    //Pass the input X and target y here
+model.score(X, y)
+model.predict([[5, 2, 2]])
+
+View jupyter notebook for more details
+
+----------------------
 
 
 
