@@ -1,0 +1,34 @@
+Machine Learning Tutorial Python - 9 Decision Tree
+----------------------------------------------------
+Some time we cannot draw the line base on linear or logical regression.
+In that case, we need to go with decision tree algorithim
+In this logic it will make the decision based on each value.
+And make the decision like a tree
+
+Here first on what basics the order should start.
+Based on the order, the performance will be get impacted
+First it will check on one of the column and check the entropy, whether the values are same for one of the column or not.
+If same, it is low entropy (Low different and mostly same) and this is high information gain and try to start with this as the root tree
+Here it will start with the company where for facebook all target values are same
+
+When dealing with decision tree, we will hear about gini impurity which means it is the impurity in the data set
+
+We can use 
+
+from sklearn.preprocessing import LabelEncoder
+le_company = LabelEncoder()
+
+df['company_n'] = df.fit_transform(df['company'])
+Like wise we need assign numeric values for each values in different columns
+Then drop the string columns as we will be using the numeric columns
+
+We can make ready the input and target file
+
+For decision tree, we can use below
+from sklearn import tree
+model = tree.DecisionTreeClassifier()
+model.fit(X, y)    //Pass the input X and target y here
+model.score(X, y)
+model.predict([[5, 2, 2]])
+
+View jupyter notebook for more details
