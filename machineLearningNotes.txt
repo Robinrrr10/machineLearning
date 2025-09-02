@@ -628,7 +628,8 @@ View jupyter notebook for more details
 ----------------------
 
 
-
+Machine Learning Tutorial Python - 10 Support Vector Machine (SVM)
+------------------------------------------------------------------
 
 
 
