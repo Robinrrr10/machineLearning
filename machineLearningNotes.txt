@@ -630,10 +630,38 @@ View jupyter notebook for more details
 
 Machine Learning Tutorial Python - 10 Support Vector Machine (SVM)
 ------------------------------------------------------------------
+Support vector machine is one of the technique to solve classification problem in the better way.
+It will consider near by splitting plots/points
+We need to dray the maximum line helps to split. that will be good to split the line and that works effectively
+In 2D we need to draw a line. In 3D we need to split with the plane and for n number of D we cannot imagine. but theoritically and mathematically it was possible to split
+
+We need to understand below 2 
+1. Gamma 
+2. Regularization
+
+Gamma:
+High Gamma: Here we can draw the splitting line near the splitting plots. It may not be straight. Here we will consider only near by splitting plots
+Low Gamma: Here will consider near by and far points both. Here we will draw a straight line which splits. 
+
+Both the approaches are fine. But low gamma would be better in many cases. Rarely we will get the failure. But commutaion and overall it would be fine
+We might get some error in Low gamma. But stil it was fine and better
+
+
+Regularization:
+High Regularization: Here we will carefully draw the line which splits both
+Low Regularization: Here will split with straight line which will fit for splitting
+
+Low regularization might have some error. But still it was better
 
 
 
+We might have complex data frame with x y and z
+We can apply formula
+z = x^2 + y ^2 
+(x square + y square)
 
+We can have X and Z in regular and Y will be straight line again.
+Once plotted we should be able to get the line
 
 
 
