@@ -664,6 +664,17 @@ We can have X and Z in regular and Y will be straight line again.
 Once plotted we should be able to get the line
 
 
+See jupyter notebook for more details
+
+For using SVM use below
+
+from sklearn.svm import svc
+model = SVC()
+model.fit(X, y)
+
+SVC also has parameters, we can fine tune with those parameters
+
+
 
 
 
