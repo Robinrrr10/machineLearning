@@ -677,6 +677,13 @@ We can pass the parameter in SVC(), By that we can fine tune the model for more 
 See jyputer notebook for more details
 
 
+------------------
+
+
+Machine Learning Tutorial Python - 11 Random Forest
+---------------------------------------------------
+
+
 
 
 
