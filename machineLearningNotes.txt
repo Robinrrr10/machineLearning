@@ -682,7 +682,10 @@ See jyputer notebook for more details
 
 Machine Learning Tutorial Python - 11 Random Forest
 ---------------------------------------------------
-
+Here the dataset will be splitted into multiple random slots.
+Decision tree will be created for each slots to take the decision.
+Based on majority of the decision, prediction will be happen here.
+Prediction will be applied based on majority of the decision
 
 
 
