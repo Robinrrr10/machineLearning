@@ -1,0 +1,31 @@
+Machine Learning Tutorial Python - 11 Random Forest
+---------------------------------------------------
+Here the dataset will be splitted into multiple random slots.
+Decision tree will be created for each slots to take the decision.
+Based on majority of the decision, prediction will be happen here.
+Prediction will be applied based on majority of the decision
+
+Here we will use below to use this:
+
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier()
+model.fit(X, y)
+
+We can fine tune with multiple paramters.
+Main parameter to fine tune is n_estimators count. Here we can give how many decision tree we need to split up. 
+By default, it will be 10. We can increase and fine tune. and we can see which one gives high score
+
+
+y_prediction = model.predict(X_test)
+
+Once done, we can use confusion metrics to see the accuracy
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_predicted)
+
+We can visualized the confusion matrix on the seaborn for better visualization.
+
+For more details please go throught the jupyter notebook for this tutorial
+
+
+-----------------
