@@ -687,7 +687,11 @@ Decision tree will be created for each slots to take the decision.
 Based on majority of the decision, prediction will be happen here.
 Prediction will be applied based on majority of the decision
 
+Here we will use below to use this:
 
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier()
+model.fit(X, y)
 
 
 
