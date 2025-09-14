@@ -713,6 +713,16 @@ For more details please go throught the jupyter notebook for this tutorial
 -----------------
 
 
+Machine Learning Tutorial Python 12 - K Fold Cross Validation
+------------------------------------------------------------
+
+
+
+
+
+--------------------
+
+
 
 
 
