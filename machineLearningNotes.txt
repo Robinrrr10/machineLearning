@@ -726,6 +726,47 @@ Giving few more example. Lets say there are data. Data will be splitted into 5 s
 This is K fold cross validation. It is better than the previous for validating which model works better.
 
 
+We can use KFold or StratifiedKFold like below. But StratifiedKFold is bit better. Because it uses one by one. For KFold uses in random
+
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=10)
+
+score_lr = []
+score_svc = []
+score_rf = []
+
+from sklearn.model_selection import StratifiedKFold
+skf = StratifiedKFold(n_splits=10) 
+
+for train_index, test_index in skf.split(digits.data, digits.target):
+    X_train, X_test, y_train, y_test = digits.data[train_index], digits.data[test_index], digits.target[train_index], digits.target[test_index]
+    score_lr.append(get_score(LogisticRegression(max_iter=1000), X_train, X_test, y_train, y_test))
+    score_svc.append(get_score(SVC(), X_train, X_test, y_train, y_test))
+    score_rf.append(get_score(RandomForestClassifier(n_estimators=200), X_train, X_test, y_train, y_test))
+
+Print below and see the scores
+score_lr
+score_svc
+score_rf
+
+Above is just for explaining about the internal logic.
+We can use below cross_val_score which takes care of above
+
+
+from sklearn.model_selection import cross_val_score
+cross_val_score(LogisticRegression(max_iter=1000), digits.data, digits.target)
+cross_val_score(SVC(), digits.data, digits.target)
+cross_val_score(RandomForestClassifier(n_estimators=50), digits.data, digits.target)
+
+cross_val_score(RandomForestClassifier(n_estimators=100), digits.data, digits.target)
+cross_val_score(RandomForestClassifier(n_estimators=150), digits.data, digits.target)
+cross_val_score(RandomForestClassifier(n_estimators=200), digits.data, digits.target)
+
+We can give different model and check
+We can also give different parameters of the model and we can check. This is parameter turning
+
+Please check jupyter notebook for more details
+
 
 --------------------
 
