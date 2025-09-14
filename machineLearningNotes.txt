@@ -716,7 +716,14 @@ For more details please go throught the jupyter notebook for this tutorial
 Machine Learning Tutorial Python 12 - K Fold Cross Validation
 ------------------------------------------------------------
 
+Cross validation is the technique used to evaluate which type of model works better.
 
+We can use any of the 3 validation options, But the 3rd k fold cross validation technique is the better. Below is the reason
+Option 1. In first option, we can give all type of data as the input without splitting, we can use the any of the same data to validate. Here the model already knows the answer. So it can predict.
+Option 2. In second option, we can split the data into train and test as like above tutorials and we can use train for training and test for testing. It can works mostly. But the problem here is, lets say that test data has some of the complex things which was not covered in the training, that time the model cannot work better
+Option 3: This is k fold cross validation. Here, the data will be splitted into slots/folds. Then each one fold with the taken as the each test and rest of the fold will be taken in each train. It will give score for each. And we can get the score and we can average. So this will cover all data as the train and test train and the score will be average. This is better than previous 2. 
+Giving few more example. Lets say there are data. Data will be splitted into 5 sets. 1 set will be used as the test and then other 4 will be used the train and it will give the score. Then again, 2nd set will be used as the test and 1st & 3 to 4 sets will be used as the train and get the score. It will be repeated till the let will be used as the test and all above will be used as the train and get the score. It will take the average of all scores and give.
+This is K fold cross validation. It is better than the previous for validating which model works better.
 
 
 
