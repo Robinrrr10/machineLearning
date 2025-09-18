@@ -1,0 +1,83 @@
+Machine Learning Tutorial Python - 13: K Means Clustering Algorithm
+--------------------------------------------------------------------
+Machine learning algorithm is categorised into 3
+1. Supervised
+2. Unsupervised
+3. Reinforcement learning
+
+All above tutorials are supervised. Because all above has targets
+When we have inputs and targets for ML, it is supervised learning.
+Because we know the targets
+
+When we have only inputs, and there is no targets, we can say it is unsupervised.
+We are not sure what is the target
+KMean is the popular one used for unsupervised learning
+
+Here we will get the data points without target
+Plot each data points in scatter.
+And visually see how much it can be grouped (cluster)
+We can take that as the K value (number of cluster or groups)
+
+Technically to find, we can give 2 different random points we will call it as centroid, 
+And calculate the distance of each points with centroid.
+We can group based on the points which are closer to each centroid.
+Then recalculate and reposition the centroid position based on the groups.
+Agan repeat recalculating the distance of each points with new centroid position and regroup it.
+Repeat the same again and again until the group not changes.
+That is the correct final centroid position.
+Here we are supplying K (number of cluster)
+
+
+But how can we find the K (number of clusters)
+We can use one of the technique name elbo method to find the K (number of cluster)
+Might be start with 2 as K (number of clusters(groups) as 2) and increase the K and find the SSE (Sum of square error)
+Get distance of each data point of the group(for the centroid) with first centroid and sqaure it and then sum
+Do the same for other centroid and get SSE for 2.
+Do the same by increasing the K one by one until error(SSE) before 0
+Now we have SSE for each number of clusters. 
+Now look at all SSEs
+We can see when increasing the number of cluster, error(difference) decreases
+We can also see in one point of K the difference(errors) start reducing. 
+That point we can consider as K
+If we draw the same, it looks like the hand elbo.
+That elbo point is consider as the K
+That will be the good K number
+
+Please check the image for the formula
+
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import MinMaxScaler
+
+
+scaler = MinMaxScaler()           # this will be used to take in the range of 0 to 1. 0 as min and max as 1 and other values will be between 0 and 1. So the pointing will be easy and more clear
+scaler.fit(df[['Income($)']])
+df['Income($)'] = scaler.transform(df[['Income($)']])
+
+# Doing the same for age
+scaler.fit(df[['Age']])
+df['Age'] = scaler.transform(df[['Age']])
+
+km = KMeans(n_clusters=3)   # Here we have given number of cluster as 3. But we need to find the number of clusters. I will add that in below after some lines
+y_predicted = km.fit_predict(df[['Age', 'Income($)']])
+df['predicted'] = y_predicted
+
+km.cluster_centers_   # This will give center(centroid) point of each cluster
+
+
+To find the K (number of clusters), we can use below elbo method.
+
+k_rng = range(1, 10)
+sse = []                  //WE need to take sum of square errors for each k
+for k in k_rng:
+    km = KMeans(n_clusters=k)
+    km.fit(df[['Age', 'Income($)']])
+    sse.append(km.inertia_)   #km.inertia will give the sum of square error
+
+Below will print the elbo and we can find the elbo K point.
+plt.xlabel('k')
+plt.ylabel('sum of square error')
+plt.plot(k_rng, sse)
+
+
+Please check the jupyter notebook for details
