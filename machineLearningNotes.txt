@@ -818,9 +818,41 @@ That will be the good K number
 Please check the image for the formula
 
 
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import MinMaxScaler
 
 
+scaler = MinMaxScaler()           # this will be used to take in the range of 0 to 1. 0 as min and max as 1 and other values will be between 0 and 1. So the pointing will be easy and more clear
+scaler.fit(df[['Income($)']])
+df['Income($)'] = scaler.transform(df[['Income($)']])
 
+# Doing the same for age
+scaler.fit(df[['Age']])
+df['Age'] = scaler.transform(df[['Age']])
+
+km = KMeans(n_clusters=3)   # Here we have given number of cluster as 3. But we need to find the number of clusters. I will add that in below after some lines
+y_predicted = km.fit_predict(df[['Age', 'Income($)']])
+df['predicted'] = y_predicted
+
+km.cluster_centers_   # This will give center(centroid) point of each cluster
+
+
+To find the K (number of clusters), we can use below elbo method.
+
+k_rng = range(1, 10)
+sse = []                  //WE need to take sum of square errors for each k
+for k in k_rng:
+    km = KMeans(n_clusters=k)
+    km.fit(df[['Age', 'Income($)']])
+    sse.append(km.inertia_)   #km.inertia will give the sum of square error
+
+Below will print the elbo and we can find the elbo K point.
+plt.xlabel('k')
+plt.ylabel('sum of square error')
+plt.plot(k_rng, sse)
+
+
+Please check the jupyter notebook for details
 
 
 -------------------
