@@ -904,7 +904,24 @@ Eg
 P(Survived/Male & class & Age & Cabin & Fare)
 To find the survived rate, it will use independent featues of male, class, age, cabin and fare
 
-Navie based is used in many places such as email sparm detection, character detection, Weather prediction, face detection, News classification etc
+Naive based is used in many places such as email sparm detection, character detection, Weather prediction, face detection, News classification etc
+
+
+We can create naive bayes model like below
+Here we have used Gaussian naive bayes as data distributtion is normal. 
+We have used this because the data distribution is normal
+
+from sklearn.naive_bayes import GaussianNB
+model = GaussianNB();
+model.fit(X_train, y_train)
+model.predict(X_test)
+model.score(X_test, y_test)
+
+model.predict_proba(X_test) Here it will show the prability value for each
+
+-----------------------
+
+
 
 
 -------------------
