@@ -855,6 +855,11 @@ plt.plot(k_rng, sse)
 Please check the jupyter notebook for details
 
 
+------------------
+
+Machine Learning Tutorial Python - 14: Naive Bayes Classifier Algorithm Part 1
+-----------------------------------------------------------------------------
+
 -------------------
 
 ----------------------------
