@@ -1,0 +1,66 @@
+Machine Learning Tutorial Python - 14: Naive Bayes Classifier Algorithm Part 1
+-----------------------------------------------------------------------------
+We can see some probalility related things
+
+If we swip a coin, the probability of getting head is 1/2 which is 50%
+P(head) = 1/2
+P(head) = number of head side in coin / total number of sides in coin
+P(head) = 1/2
+
+
+
+Probability of getting queen in cards
+There are four queens are there. 
+There are total 52 cards
+Below is formula for probability getting queen
+P(queen) = number off queens / total number of cards
+P(queen) = 4/52
+P(queen) = 1/13
+
+Lets say, now we know the card ins diamond, now calculate what is probabilty of getting queen
+Total diamond card = 13
+Number of queen in diamond = 1
+P(queen/diamond)= 1/13
+This is conditional probability.
+P(A/B) = Probability of event A knowing that event B has already occurred.
+
+Below are the formula:
+P(A/B) = (P(B/A) * P(A))/ P(B)
+
+
+P(queen/diamond) = (P(diamonds/queen) * P(queen))/ P(diamonds)
+
+P(diamonds/queen) = 1/4
+P(queen) = 1/13
+P(diamond) = 1/4
+With the help of other known probabilities, we can find the required probabilty
+
+P(queen/diamond) = ((1/4 * 1/13)) / 1/4
+P(queen/diamond) = 1/13
+
+
+
+Naive Bayes will use probibility algorithim.
+Eg
+P(Survived/Male & class & Age & Cabin & Fare)
+To find the survived rate, it will use independent featues of male, class, age, cabin and fare
+
+Naive based is used in many places such as email sparm detection, character detection, Weather prediction, face detection, News classification etc
+
+
+We can create naive bayes model like below
+Here we have used Gaussian naive bayes as data distributtion is normal. 
+We have used this because the data distribution is normal
+
+from sklearn.naive_bayes import GaussianNB
+model = GaussianNB();
+model.fit(X_train, y_train)
+model.predict(X_test)
+model.score(X_test, y_test)
+
+model.predict_proba(X_test) Here it will show the prability value for each
+
+------------------
+
+
+-----------------------
