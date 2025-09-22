@@ -924,6 +924,14 @@ model.predict_proba(X_test) Here it will show the prability value for each
 
 Machine Learning Tutorial Python - 15: Naive Bayes Classifier Algorithm Part 2
 ------------------------------------------------------------------------------
+In this tutorial we can see how we can find whether the email is spam or not.
+Here we can also see how we can use the sentences/words in the machine learning.
+Here the dataset was string first. It has emails in sentences and whether it is spam or not.
+
+We need to use the technique called count vectorizer technique for text to count. Becuase machine leanring understand only numbers
+This will take the unique words on the sentence in the each data and make the count
+For each unique words it will create the count
+
 
 
 
