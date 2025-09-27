@@ -932,7 +932,10 @@ We need to use the technique called count vectorizer technique for text to count
 This will take the unique words on the sentence in the each data and make the count
 For each unique words it will create the count
 
-
+We can use CountVectorizer for getting number of counts of each words in the sentences
+from sklearn.feature_extraction.text import CountVectorizer
+v = CountVectorizer()
+count = v.fit_transform(X.values)
 
 
 -------------------
