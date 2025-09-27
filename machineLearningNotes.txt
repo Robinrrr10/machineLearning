@@ -938,6 +938,13 @@ v = CountVectorizer()
 count = v.fit_transform(X.values)
 
 
+Naive bayes has 3 types of classifier
+Bernoulli Naive Bayes : This is used when feature has only 2 or binary in nature. 0 or 1.  yes or not. one or two, true or false. During that we can use this
+Multinomial Naive Bayes : It is used when there is discreate data. Example movie rating from 1 to 5 etc
+Gaussian Naive Bayes: In last tutorial we have used Gausian Naive Bayes. Mostly used for probabilty related.
+
+Here we will use multinomial naive bayes
+
 -------------------
 
 ----------------------------
