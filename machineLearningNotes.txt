@@ -952,6 +952,18 @@ model = MultinomialNB()
 model.fit(X_train, y_train)
 
 
+In above, we want to convert in to count first and then we need to pass it to the model.
+To make it simple we can use Pipeline to use multiple steps here.
+In below, X_train and y_train will be passed on pipeline which internally calls CountVectorizer first and then pass it will call Multinomial
+
+from sklearn.pipeline import Pipeline
+clf = Pipeline([('vectorizer', CountVectorizer()), ('nb', MultinomialNB)])
+clf.fit(X_train, y_train)
+clf.score(X_test, y_test)
+
+For more detaisl please check the jupyter notebook
+
+
 -------------------
 
 ----------------------------
