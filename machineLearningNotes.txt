@@ -945,6 +945,13 @@ Gaussian Naive Bayes: In last tutorial we have used Gausian Naive Bayes. Mostly 
 
 Here we will use multinomial naive bayes
 
+Below is the way to use multinomial naive bayes
+
+from sklearn.naive_bayes import MultinomialNB
+model = MultinomialNB()
+model.fit(X_train, y_train)
+
+
 -------------------
 
 ----------------------------
