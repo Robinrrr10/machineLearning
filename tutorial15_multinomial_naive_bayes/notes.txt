@@ -1,0 +1,43 @@
+Machine Learning Tutorial Python - 15: Naive Bayes Classifier Algorithm Part 2
+------------------------------------------------------------------------------
+In this tutorial we can see how we can find whether the email is spam or not.
+Here we can also see how we can use the sentences/words in the machine learning.
+Here the dataset was string first. It has emails in sentences and whether it is spam or not.
+
+We need to use the technique called count vectorizer technique for text to count. Becuase machine leanring understand only numbers
+This will take the unique words on the sentence in the each data and make the count
+For each unique words it will create the count
+
+We can use CountVectorizer for getting number of counts of each words in the sentences
+from sklearn.feature_extraction.text import CountVectorizer
+v = CountVectorizer()
+count = v.fit_transform(X.values)
+
+
+Naive bayes has 3 types of classifier
+Bernoulli Naive Bayes : This is used when feature has only 2 or binary in nature. 0 or 1.  yes or not. one or two, true or false. During that we can use this
+Multinomial Naive Bayes : It is used when there is discreate data. Example movie rating from 1 to 5 etc
+Gaussian Naive Bayes: In last tutorial we have used Gausian Naive Bayes. Mostly used for probabilty related.
+
+Here we will use multinomial naive bayes
+
+Below is the way to use multinomial naive bayes
+
+from sklearn.naive_bayes import MultinomialNB
+model = MultinomialNB()
+model.fit(X_train, y_train)
+
+
+In above, we want to convert in to count first and then we need to pass it to the model.
+To make it simple we can use Pipeline to use multiple steps here.
+In below, X_train and y_train will be passed on pipeline which internally calls CountVectorizer first and then pass it will call Multinomial
+
+from sklearn.pipeline import Pipeline
+clf = Pipeline([('vectorizer', CountVectorizer()), ('nb', MultinomialNB)])
+clf.fit(X_train, y_train)
+clf.score(X_test, y_test)
+
+For more detaisl please check the jupyter notebook
+
+
+-------------------
