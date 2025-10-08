@@ -966,6 +966,10 @@ For more detaisl please check the jupyter notebook
 
 -------------------
 
+Machine Learning Tutorial Python - 16: Hyper parameter Tuning (GridSearchCV)
+-----------------------------------------------------------------------------
+
+
 ----------------------------
 
 Notes:
