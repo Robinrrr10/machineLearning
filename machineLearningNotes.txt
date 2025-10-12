@@ -968,7 +968,7 @@ For more detaisl please check the jupyter notebook
 
 Machine Learning Tutorial Python - 16: Hyper parameter Tuning (GridSearchCV)
 -----------------------------------------------------------------------------
-
+In this tutorial we can see the way to find the best model to be used and with best params to be passed for their params
 
 ----------------------------
 
