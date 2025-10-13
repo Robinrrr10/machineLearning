@@ -969,6 +969,25 @@ For more detaisl please check the jupyter notebook
 Machine Learning Tutorial Python - 16: Hyper parameter Tuning (GridSearchCV)
 -----------------------------------------------------------------------------
 In this tutorial we can see the way to find the best model to be used and with best params to be passed for their params
+lets say we want to use iris data set and find the folder type.
+First question comes like which model I need to choose. There are so many models like SVM, RandomForst, Logistic Regression, Decision Tree, Naive beyes etc
+Lets say we picked one Eg: SVM, then the next question comes like which hyper params I need to use when creating the model.
+There are different kernal (rbf, linear, poly), C (Integer) and Gamma (Gamma)  available when creating the model
+The process of finding the best params of the model is calling hyper parameter tuning
+
+
+
+Below is the way to use GridSearchCV
+
+from sklearn.model_selection import GridSearchCV()
+clf = GridSearchCV(giveModelHere, giveParamsHere, cv=giveNumberOfTestIteration, return_train_score=False)
+Eg:
+from sklearn.model_selection import GridSearchCV
+clf = GridSearchCV(SVC(gamma='auto'), {'C':[1, 5, 10, 20], 'kernel':['rbf', 'linear']}, cv=5, return_train_score=False)
+clf.fit(iris.data, iris.target)
+clf.cv_results_
+
+
 
 ----------------------------
 
