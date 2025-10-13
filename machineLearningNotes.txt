@@ -987,6 +987,15 @@ clf = GridSearchCV(SVC(gamma='auto'), {'C':[1, 5, 10, 20], 'kernel':['rbf', 'lin
 clf.fit(iris.data, iris.target)
 clf.cv_results_
 
+Below 2 will give you the best score and best params
+clf.best_score_
+clf.best_params_
+
+Above is hyper parameter turing. We try to find the best params of the model
+
+
+Below we can see how to find best model
+
 
 
 ----------------------------
