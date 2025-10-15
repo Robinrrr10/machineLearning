@@ -1006,12 +1006,48 @@ clf.cv_results_
 
 
 For finding the best model, we need to create the dictionary and have the model and the params
-And we need to call GridSearchCV in each iteration and we can find the best
+And we need to call GridSearchCV or RandomizedSearchCV in each iteration and we can find the best
+
+Example:
+from sklear.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+
+model_data = {
+    'svc': {
+        'model': SVC(gamma='auto'),
+        'params' : {
+            'C': [1,10,20],
+            'kernel': ['rbf','linear']
+        }  
+    },
+    'random_forest': {
+        'model': RandomForestClassifier(),
+        'params' : {
+            'n_estimators': [1,5,10]
+        }
+    },
+    'logistic_regression' : {
+        'model': LogisticRegression(solver='liblinear',multi_class='auto'),
+        'params': {
+            'C': [1,5,10]
+        }
+    }
+}
+
+scores = []
+for mdl_name, mdl in model_data.items():
+    clff = GridSearchCV(mdl['model'], mdl['params'], cv=5, return_train_score=False)
+    clff.fit(iris.data, iris.target)
+    scores.append({
+        'model': mdl_name,
+        'best_score': clff.best_score_,
+        'best_params': clff.best_params_
+    })
 
 
 
-
-Below we can see how to find best model
+By this we can see how to find best model
 
 
 
