@@ -992,6 +992,23 @@ clf.best_score_
 clf.best_params_
 
 Above is hyper parameter turing. We try to find the best params of the model
+As GridSearchCV is trying for all permutation and combination, it needs more computation power.
+
+If we worried about computation power, then we can go with RandomizedSearchCV.
+This works similar, but for random values for given iteration times.
+It won't go with all combination. It will pick few random value and runs only for given number of iteration and gives the results
+This helps if we have more params and worrid about computation
+
+from sklearn.model_selection import RandomizedSearchCV
+clf = RandomizedSearchCV(SVC(gamma='auto'), {'C':[1, 5, 10, 20], 'kernel':['rbf', 'linear']}, cv=5, return_train_score=False, n_iter=2)    // in n_iter we will give number of iternation needed.
+clf.fit(iris.data, iris.target)
+clf.cv_results_
+
+
+For finding the best model, we need to create the dictionary and have the model and the params
+And we need to call GridSearchCV in each iteration and we can find the best
+
+
 
 
 Below we can see how to find best model
