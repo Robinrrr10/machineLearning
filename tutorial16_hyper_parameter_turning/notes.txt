@@ -1,0 +1,83 @@
+Machine Learning Tutorial Python - 16: Hyper parameter Tuning (GridSearchCV)
+-----------------------------------------------------------------------------
+In this tutorial we can see the way to find the best model to be used and with best params to be passed for their params
+lets say we want to use iris data set and find the folder type.
+First question comes like which model I need to choose. There are so many models like SVM, RandomForst, Logistic Regression, Decision Tree, Naive beyes etc
+Lets say we picked one Eg: SVM, then the next question comes like which hyper params I need to use when creating the model.
+There are different kernal (rbf, linear, poly), C (Integer) and Gamma (Gamma)  available when creating the model
+The process of finding the best params of the model is calling hyper parameter tuning
+
+
+
+Below is the way to use GridSearchCV
+
+from sklearn.model_selection import GridSearchCV()
+clf = GridSearchCV(giveModelHere, giveParamsHere, cv=giveNumberOfTestIteration, return_train_score=False)
+Eg:
+from sklearn.model_selection import GridSearchCV
+clf = GridSearchCV(SVC(gamma='auto'), {'C':[1, 5, 10, 20], 'kernel':['rbf', 'linear']}, cv=5, return_train_score=False)
+clf.fit(iris.data, iris.target)
+clf.cv_results_
+
+Below 2 will give you the best score and best params
+clf.best_score_
+clf.best_params_
+
+Above is hyper parameter turing. We try to find the best params of the model
+As GridSearchCV is trying for all permutation and combination, it needs more computation power.
+
+If we worried about computation power, then we can go with RandomizedSearchCV.
+This works similar, but for random values for given iteration times.
+It won't go with all combination. It will pick few random value and runs only for given number of iteration and gives the results
+This helps if we have more params and worrid about computation
+
+from sklearn.model_selection import RandomizedSearchCV
+clf = RandomizedSearchCV(SVC(gamma='auto'), {'C':[1, 5, 10, 20], 'kernel':['rbf', 'linear']}, cv=5, return_train_score=False, n_iter=2)    // in n_iter we will give number of iternation needed.
+clf.fit(iris.data, iris.target)
+clf.cv_results_
+
+
+For finding the best model, we need to create the dictionary and have the model and the params
+And we need to call GridSearchCV or RandomizedSearchCV in each iteration and we can find the best
+
+Example:
+from sklear.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+
+model_data = {
+    'svc': {
+        'model': SVC(gamma='auto'),
+        'params' : {
+            'C': [1,10,20],
+            'kernel': ['rbf','linear']
+        }  
+    },
+    'random_forest': {
+        'model': RandomForestClassifier(),
+        'params' : {
+            'n_estimators': [1,5,10]
+        }
+    },
+    'logistic_regression' : {
+        'model': LogisticRegression(solver='liblinear',multi_class='auto'),
+        'params': {
+            'C': [1,5,10]
+        }
+    }
+}
+
+scores = []
+for mdl_name, mdl in model_data.items():
+    clff = GridSearchCV(mdl['model'], mdl['params'], cv=5, return_train_score=False)
+    clff.fit(iris.data, iris.target)
+    scores.append({
+        'model': mdl_name,
+        'best_score': clff.best_score_,
+        'best_params': clff.best_params_
+    })
+
+
+
+By this we can see how to find best model
+
