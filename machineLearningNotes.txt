@@ -1049,6 +1049,14 @@ for mdl_name, mdl in model_data.items():
 
 By this we can see how to find best model
 
+in jupyter notebook we can see more details
+
+-------------------
+
+
+Machine Learning Tutorial Python - 17: L1 and L2 Regularization | Lasso, Ridge Regression
+-----------------------------------------------------------------------------------------
+
 
 
 ----------------------------
