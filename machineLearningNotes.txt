@@ -1080,6 +1080,7 @@ Which will give better results for balanced
 
 There are some formula for L1 and L2 reguralization, Please check the image to see the formula used
 
+Here we can compare normal LinearRegression method with L1 and L2 Regularization method. And we can notice, in most of the case L1 and L2 Regularization works better when compare with normal LinearRegression
 
 We have lesso in sklearn which uses L1 regularization
 Below is the link of documentation
