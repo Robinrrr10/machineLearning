@@ -1,0 +1,49 @@
+Machine Learning Tutorial Python - 17: L1 and L2 Regularization | Lasso, Ridge Regression
+-----------------------------------------------------------------------------------------
+Overfitting is one of the issue in the machine learning.
+To overcome or to solve this we use L1 and L2 reguralization
+
+Underfit -  if we train with less data set or if we draw the straight line which divides, it may not sometime predict the right value when the value is in cornor or other ear
+Overfit - Whe we train the model with more training set or if we draw the line in each points, it it may not be good. This is overfit
+Balanced fit - If we train with certain amount of train set or if we draw the line with balanced and split two, that might be the balanced fit
+
+See image for more details and clarity
+
+
+Underfit
+o + o1 * age
+
+Overfit
+o + o1 * age + o2 * age^2 + o3 * age^3 + o4 * age^4
+
+Balanced
+o + o1 * age + o2 * age^2
+
+To make the overfitting to balaced fit, you need to make the o3 and o3 closed to 0.
+Which will give better results for balanced
+
+There are some formula for L1 and L2 reguralization, Please check the image to see the formula used
+
+Here we can compare normal LinearRegression method with L1 and L2 Regularization method. And we can notice, in most of the case L1 and L2 Regularization works better when compare with normal LinearRegression
+
+We have lesso in sklearn which uses L1 regularization
+Below is the link of documentation
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html
+
+from sklearn.linear_model import Lasso
+model = Lasso(alpha=50, max_iter=100, tol=0.1)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+
+We have ridge in sklearn which uses L2 regularization
+Below is the link of documentation
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+
+from sklearn.linear_model import Ridge
+model = Ridge(alpha=50, max_iter=100, tol=0.1)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+
+For more details please refer the notebook of this tutorial
