@@ -1075,6 +1075,11 @@ o + o1 * age + o2 * age^2 + o3 * age^3 + o4 * age^4
 Balanced
 o + o1 * age + o2 * age^2
 
+To make the overfitting to balaced fit, you need to make the o3 and o3 closed to 0.
+Which will give better results for balanced
+
+There are some formula for L1 and L2 reguralization, Please check the image to see the formula used
+
 
 --------------------------
 
