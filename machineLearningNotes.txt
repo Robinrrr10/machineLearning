@@ -1081,6 +1081,28 @@ Which will give better results for balanced
 There are some formula for L1 and L2 reguralization, Please check the image to see the formula used
 
 
+We have lesso in sklearn which uses L1 regularization
+Below is the link of documentation
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html
+
+from sklearn.linear_model import Lasso
+model = Lasso(alpha=50, max_iter=100, tol=0.1)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+
+We have ridge in sklearn which uses L2 regularization
+Below is the link of documentation
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+
+from sklearn.linear_model import Ridge
+model = Ridge(alpha=50, max_iter=100, tol=0.1)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+
+For more details please refer the notebook of this tutorial
+
 --------------------------
 
 
