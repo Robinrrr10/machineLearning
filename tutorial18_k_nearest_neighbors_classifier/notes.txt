@@ -1,0 +1,52 @@
+Machine Learning Tutorial Python - 18: K nearest neighbors classification with python code
+------------------------------------------------------------------------------------------
+This is a classification technique which predict based number of nearest values
+Here K is the number of nearest value.
+
+Lets say we are taking iris data set and based on length and width of the flower the type might vary
+If we plot all in the chat, we can see how it looks like.
+Then we should be able to predict if some new point was given
+
+Please refer images for more details
+
+Here we will be giving the K which is number of nearest value.
+We will find the nearest values and based on that we will see which type of flower is near to that. 
+Based on k number, the highest number is the actual value.
+Here we should also consider giving the correct value of K. There are changes only very values data points are available for that type itself.
+So in that case, if the K is higher it might predict the wrong value.
+So the K value should not be very less and should not be very high
+
+Below is the documentation for KNN classifier (KNeighborsClassifier)
+https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+
+Use below to use KNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifier
+model = KNeighborsClassifier(n_neighbors=3)   //Here we will give the k // number of k nearest value
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+
+We can also see confusion metrics for the same
+from sklearn.metrics import confusion_metrix
+y_predicted = model.predict(X_test)
+cm = confusion_metrix(y_test, y_predicted)
+cm
+
+
+We can visualize nicely using seaborn
+import matplotlib.pyplot as plt
+import seabord as sn
+plt.figure(figsize=(7, 5))
+sn.heatmap(cm, annot=True)
+plt.xlabel('predicted')
+plt.ylabel('truth')
+
+
+We can also visualize using classification_report
+from sklearn.metrics import classification_report
+print(classification_report(y_test, y_predicted))
+This will give some details about the report
+
+Please check the notebook of this tutorial for more details
+
+----------------------------
