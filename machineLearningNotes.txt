@@ -1124,6 +1124,16 @@ Here we should also consider giving the correct value of K. There are changes on
 So in that case, if the K is higher it might predict the wrong value.
 So the K value should not be very less and should not be very high
 
+Below is the documentation for KNN classifier (KNeighborsClassifier)
+https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+
+Use below to use KNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifier
+model = KNeighborsClassifier(n_neighbors=3)   //Here we will give the k // number of k nearest value
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+
+
 
 
 ----------------------------
