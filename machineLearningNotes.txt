@@ -1106,6 +1106,9 @@ For more details please refer the notebook of this tutorial
 
 --------------------------
 
+Machine Learning Tutorial Python - 18: K nearest neighbors classification with python code
+------------------------------------------------------------------------------------------
+
 
 ----------------------------
 
