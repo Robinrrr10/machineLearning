@@ -1157,6 +1157,11 @@ This will give some details about the report
 
 Please check the notebook of this tutorial for more details
 
+---------------------------
+
+Machine Learning Tutorial Python - 19: Principal Component Analysis (PCA) with Python Code
+------------------------------------------------------------------------------------------
+
 ----------------------------
 
 Notes:
