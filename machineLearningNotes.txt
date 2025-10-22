@@ -1177,6 +1177,15 @@ There are 2 important things,
 1. We need to scale the features before applying PCA
 2. Accuracy might drop
 
+
+To scale we use StandardScalar 
+
+from sklearn.preprocessing import StandardScalar
+scalar = StandardScalar()
+X_scaled = scalar.fit_transform(X)
+//Above will assign the value from -1 to 1 for each of the X
+
+
 ----------------------------
 
 Notes:
