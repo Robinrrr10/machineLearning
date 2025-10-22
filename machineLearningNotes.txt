@@ -1184,7 +1184,7 @@ scalar = StandardScalar()
 X_scaled = scalar.fit_transform(X)
 //Above will assign the value from -1 to 1 for each of the X
 
-Before PCA we should create a scaled values like above
+Better before PCA we can create a scaled values like above. But still we can directly use if requireqd
 
 from sklearn.decomposition import PCA
 pca = PCA(0.95)     //Here we are passing 95%. Based on atleast 95% of accuracy, it will eliminate other features and it will give features which are more important to make atleast 95%.
@@ -1204,6 +1204,19 @@ model.fit(X_pca, y_train)
 model.score(X_test, y_test)
 Now the score will be nearly same or atleast more than 95%.
 
+
+from sklearn.decomposition import PCA
+pca2 = PCA(0.95) 
+X_pca2 = pca2.fit_transform(X)   //We can directly pass X as well. Still it will work. So scalling is not mandatory. It will still work
+
+We can pass number of columns instead of giving %. But the accuracy might drop if number of columns are less. Below is the example
+from sklearn.decomposition import PCA
+pca2 = PCA(n_components=3)               //Here we have given only 3 columns as the feature. 
+X_pca2 = pca2.fit_transform(X)
+
+
+
+For more details refer jupyter notebook of this tutorial
 
 
 ----------------------------
