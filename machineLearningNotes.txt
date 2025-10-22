@@ -1177,13 +1177,33 @@ There are 2 important things,
 1. We need to scale the features before applying PCA
 2. Accuracy might drop
 
-
 To scale we use StandardScalar 
 
 from sklearn.preprocessing import StandardScalar
 scalar = StandardScalar()
 X_scaled = scalar.fit_transform(X)
 //Above will assign the value from -1 to 1 for each of the X
+
+Before PCA we should create a scaled values like above
+
+from sklearn.decomposition import PCA
+pca = PCA(0.95)     //Here we are passing 95%. Based on atleast 95% of accuracy, it will eliminate other features and it will give features which are more important to make atleast 95%.
+X_pca = pca.fit_transform(X_scaled)
+Now we can use this X_pca dataset as the input.
+This will contain only the major features which are required to make atleast 95%.
+
+pca.explained_variance_ratio_
+//This will show the ratio(%) of the columns which can impact 
+
+pca.n_components_
+//This will show number of components
+
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_pca, y_train)
+model.score(X_test, y_test)
+Now the score will be nearly same or atleast more than 95%.
+
 
 
 ----------------------------
