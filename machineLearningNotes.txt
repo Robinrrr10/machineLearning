@@ -1161,6 +1161,21 @@ Please check the notebook of this tutorial for more details
 
 Machine Learning Tutorial Python - 19: Principal Component Analysis (PCA) with Python Code
 ------------------------------------------------------------------------------------------
+Principal Component Analysis the technique used to reduce the features(columns)
+This might help to improve the performance.
+PCA is analyse what are all the important feature in the input data set which will impact the target variable and it will eliminate the others.
+This helps in training faster and improve the performance.
+This also helps in data visualization
+PCA is the technique to reduce the diamension (features)
+
+If we draw the plots, we can see some feature may not have much impact or it will impact very less on target variables.
+PCA will help to eliminate those and will focus more on features which impact more on the target variables
+
+If we tage handwritten digits, we can see cornor plots not make much impact on target variables.
+
+There are 2 important things,
+1. We need to scale the features before applying PCA
+2. Accuracy might drop
 
 ----------------------------
 
