@@ -1218,6 +1218,11 @@ X_pca2 = pca2.fit_transform(X)
 
 For more details refer jupyter notebook of this tutorial
 
+---------------------------
+
+Machine Learning Tutorial Python - 20: Bias vs Variance In Machine Learning
+---------------------------------------------------------------------------
+
 
 ----------------------------
 
