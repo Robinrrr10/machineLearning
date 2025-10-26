@@ -1222,6 +1222,76 @@ For more details refer jupyter notebook of this tutorial
 
 Machine Learning Tutorial Python - 20: Bias vs Variance In Machine Learning
 ---------------------------------------------------------------------------
+In this tutorial we can see what is overfit, underfit and balanced fit
+We can also see what is variance and bias. And we can see what is high variance and low variance. What is high bias and low bias
+
+When we try to buy a t shirt, we won't take overfit or underfit. We will try to go with perfect or balanced fit.
+Similarly when choosing the model, it is better to choose the balanced fit model
+
+Overfit:
+If our model fit with all training set perfectly and draws line on each points, it might draw the line on the plots itself and the error of training set will 0.
+But when we check the test set, we notice the huge error. Lets say the test error is 100.
+Lets say when change the training set again for the same data set and we perfectly plot again and draw the line on each plots, the training error was 0 again. but test error was 27 now. It was reduced.
+Based on the training set (Randomizing the training set), the difference in the test error varies high.
+As the test error varies high this is high variance.
+As the training error varies less, this is low bias
+
+Underfit:
+Lets say we have drawn the straight line which plots near to the training set, when seeing the training errot it was 43. and the test error was 41
+Lets say we changed the training set and again drawn the straing line which moves a bit and lets say now the trining error is 41 and the test error is 37
+Here the test error difference varies less. - This is low variance
+But the training error is high. Because the train error even the small value is high. - This is high bias
+
+Balanced fit:
+Lets say we come with the model which draws a line and comes with the good.
+Lets say for one curve line (of one training set),the training error is 10 and test error is 12
+Lets say for one more curve line (other random training set), the training error is 11 and test error is 15.
+Here the test error less difference. So it is low variace
+Here the train error is also less. So it is low bias
+
+
+Variance
+Measuring test error differnce is the variance
+If the test error varies more when randomizig the training set, it is high variance
+If the test error varies less when randomizing the training set, it is low variance
+
+Bias
+Measuring training error is the bias
+If the train error is more when randomizing the training set, it is high bias.
+If the train error is less when randomizing the training set, it is low bias.
+
+
+Usually for overfit model, the train error will be less and test error will be more. - High variance and low bias
+Usually for under fit model, the train error will be more and test error will be less - Low variance and high bias
+Usually for balanced fit mode, the train error and test error both will be less = Low variance and low bias. - Good model
+
+Balanced fit is always the good one for machine learning.
+
+
+Please see one more image which explains the high and low bias and variance in circle
+Truth will be the closed inner circle.
+We can notice the for low bias and low variance, the points will be in the inner circle and the points are near to each other
+For high bias and low variance, the points are far from the inner circle. But the points are near to each other
+For low bias and high variance, the points are near to inner circle. I mean in the next circl. But the points are little bit far from each other
+For high bias and high variance, the points are far from innner cicle and the points are far from each other.
+So the best truth one is low bias and low variance
+
+
+Below technique will be usefull for finding the balanced fit model:
+1. Cross validation
+2. Regularization
+3. Dimensionality reduction
+4. Ensemble techniques (Bagging and boosting)
+First 3 we have already see in some of the previous tutorials. 4 one we will see on upcoming tutorials
+Using above 4 we can find the balanced fit model or perfect model
+
+
+----------------------------
+
+
+
+
+
 
 
 ----------------------------
