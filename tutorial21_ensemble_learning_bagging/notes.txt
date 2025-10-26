@@ -1,0 +1,66 @@
+Machine Learning Tutorial Python - 21: Ensemble Learning - Bagging
+------------------------------------------------------------------
+If we use only one train sample, some time it might overfit and we will get high variance.
+To avoid that we are using ensemble
+
+Below is the way ensemble learning works.
+Here we will create multiple sub samples from the main train data set samples.
+And we will create model for each sub samples and train them each of the sub samples and we will combine them to get good result.
+If it is classification will go with major results.
+If it is regression we will got with average.
+
+Bagging and boosting are two different technique used in ensemble leanring
+
+Ensemble works for both classificaion and regression.
+For classification we use bagging. (Then after will go with majority of the answer)
+For regression we use boosting. (Then after will go with average)
+
+For example, 
+if there are 100 train samples, we will take each sub sets with 70 samples. We can take 3 sub sets. 
+It will create the sub set with random samples. Some time the data might repeat. That is fine.
+We will create 3 model with required type.
+And we will train each 3 respective sub sets.
+Then will check the result. Whatever result has been given my majority of the model, we will go with that result
+This is ensemble learning(bagging)
+(For boosting - we will go with average result)
+
+Random forest also uses the bagging technique. One small difference is here it not only create sub set on samples(rows), here it will create sub set on each features(columns) as well. Then it will use the decision tree for the result
+
+Bagging:
+Here it use any model (svn, knn, logistics regression etc)
+
+Bagged Tree:
+Here it will use only the tree. Random forest is the bagged tree.
+
+
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, stratify=y, random_state=10)    //Here stratisfy will make sure we have the same ratio of trains as per y values, random_state will be used for reproducibiliy and consistency. Used for debugging etc
+
+Below is the documentation of bagging
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html
+
+Below is way to use bagging
+from sklearn.ensemble import BaggingClassifier
+bag_model = BaggingClassifier(
+estimator = DecisionTreeClassifier(),            //We can give any model type as base_estimator.
+n_estimators = 100,            //Here we will give how many number of sub samples. 
+max_samples = 0.8,             //Here we will give much percentage of samples to be used when creating each sub samples. Here we have given 80%
+oob_score = True,              //oob_score is the out of bag. Where the data which are not used in any of sub samples can be used as the test sample here
+random_state = 0 
+)
+bag_model.fit(X_train, y_train)        //This is to train
+bag_model.oob_score    //this will give you the score
+bag_model.score(X_test, y_test)
+
+
+For more details please see the jupyter notebook
+
+---------------------
+
+
+
+-------------------------
