@@ -1288,6 +1288,46 @@ Using above 4 we can find the balanced fit model or perfect model
 
 ----------------------------
 
+Machine Learning Tutorial Python - 21: Ensemble Learning - Bagging
+------------------------------------------------------------------
+If we use only one train sample, some time it might overfit and we will get high variance.
+To avoid that we are using ensemble
+
+Below is the way ensemble learning works.
+Here we will create multiple sub samples from the main train data set samples.
+And we will create model for each sub samples and train them each of the sub samples and we will combine them to get good result.
+If it is classification will go with major results.
+If it is regression we will got with average.
+
+Bagging and boosting are two different technique used in ensemble leanring
+
+Ensemble works for both classificaion and regression.
+For classification we use bagging. (Then after will go with majority of the answer)
+For regression we use boosting. (Then after will go with average)
+
+For example, 
+if there are 100 train samples, we will take each sub sets with 70 samples. We can take 3 sub sets. 
+It will create the sub set with random samples. Some time the data might repeat. That is fine.
+We will create 3 model with required type.
+And we will train each 3 respective sub sets.
+Then will check the result. Whatever result has been given my majority of the model, we will go with that result
+This is ensemble learning(bagging)
+(For boosting - we will go with average result)
+
+Random forest also uses the bagging technique. One small difference is here it not only create sub set on samples(rows), here it will create sub set on each features(columns) as well. Then it will use the decision tree for the result
+
+Bagging:
+Here it use any model (svn, knn, logistics regression etc)
+
+Bagged Tree:
+Here it will use only the tree. Random forest is the bagged tree.
+
+
+
+
+
+
+
 
 
 
